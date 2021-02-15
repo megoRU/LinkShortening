@@ -12,12 +12,25 @@ public class Message {
   private String text;
   private String tag;
 
-  public Message(String text, String tag) {
+  @ManyToOne(fetch = FetchType.EAGER)
+  @JoinColumn(name = "user_id")
+  private User author;
+
+  public Message(String text, String tag, User user) {
+    this.author = user;
     this.text = text;
     this.tag = tag;
   }
 
   public Message() {
+  }
+
+  public User getAuthor() {
+    return author;
+  }
+
+  public void setAuthor(User author) {
+    this.author = author;
   }
 
   public String getTag() {
