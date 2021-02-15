@@ -30,8 +30,8 @@ public class MainController {
   }
 
   @PostMapping("/main")
-  public String add(@RequestParam String text, Map<String, Object> model) {
-    Message message = new Message(text);
+  public String add(@RequestParam String text, @RequestParam String tag, Map<String, Object> model) {
+    Message message = new Message(text, tag);
 
     messageRepo.save(message);
 
