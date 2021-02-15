@@ -1,23 +1,41 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-  <title>Spring Security Example </title>
+  <title>Registrations page</title>
   <!-- Bootstrap core CSS -->
   <link href="/css/bootstrap.min.css" rel="stylesheet">
 
   <!-- Custom styles for this template -->
   <link href="/css/signin.css" rel="stylesheet">
-</head>
-<body>
-Add new user
-{{#message}}
-  {{message}}
-{{/message}}
-<form action="/registration" method="post">
-  <div><label> User Name : <input type="text" name="username"/> </label></div>
-  <div><label> Password: <input type="password" name="password"/> </label></div>
-  <input type="hidden" name="_csrf" value="{{_csrf.token}}"/>
-  <div><input type="submit" value="Sign In"/></div>
-</form>
+
+<body class="text-center">
+
+<main class="form-signin">
+  <form action="/registration" method="post">
+    <img class="mb-4" src="/images/java.png" alt="" width="150" height="150">
+    <h1 class="h3 mb-3 fw-normal">Registrations</h1>
+
+    {{#message}}
+      <b> ⚠ {{message}}</b>
+      <br><br>
+    {{/message}}
+
+    <label for="inputEmail" class="visually-hidden">User name</label>
+    <input type="text" class="form-control" placeholder="User name" name="username" required>
+    <label for="inputPassword" class="visually-hidden">Password</label>
+    <input type="password" id="inputPassword" class="form-control" placeholder="Password" name="password" required>
+    <div class="checkbox mb-3">
+    </div>
+    <input type="hidden" name="_csrf" value="{{_csrf.token}}"/>
+    <button class="w-100 btn btn-lg btn-primary" type="submit">Submit</button>
+    <p class="mt-5 mb-3 text-muted">&copy; 2017–2021</p>
+  </form>
+  <a href="/login">Sign in</a>
+
+</main>
+
 </body>
 </html>
+
+
+
