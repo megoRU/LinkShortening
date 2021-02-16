@@ -23,7 +23,7 @@ public class Message {
   }
 
   public String getAuthorName() {
-    return author != null ? author.getUsername() : "<null>";
+    return author != null ? author.getUsername() : "<none>";
   }
 
   public Message() {
