@@ -55,8 +55,10 @@ body {
   color: #fff;
   background-color: #0d6efd;
   border-color: #0d6efd;
-  position: relative;
-  left: 19px;
+}
+
+.mb-auto {
+  margin: auto!important;
 }
 
 footer p {
