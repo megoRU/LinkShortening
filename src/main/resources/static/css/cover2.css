@@ -61,6 +61,10 @@ body {
   margin: auto!important;
 }
 
+.p-3 {
+  margin-top: 35px;
+}
+
 footer p {
   font-weight: 500;
   font-size: 15px;
