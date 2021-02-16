@@ -14,8 +14,8 @@
 <body class="text-center">
 <main class="form-signin">
   <form action="/login" method="post">
-    <img class="mb-4" src="/images/favicon.png" alt="" width="150" height="150">
-    <h1 class="h3 mb-3 fw-normal">Sing in</h1>
+    <img class="mb-4" draggable="false" src="/images/favicon.png" alt="" width="150" height="150">
+    <h1 class="h3 mb-3 fw-normal">Sign on</h1>
     <label for="inputEmail" class="visually-hidden">User name</label>
     <input type="text" class="form-control" placeholder="User name" name="username" required>
     <label for="inputPassword" class="visually-hidden">Password</label>
@@ -24,7 +24,7 @@
     <div class="checkbox mb-3">
     </div>
     <input type="hidden" name="_csrf" value="{{_csrf.token}}"/>
-    <button class="w-100 btn btn-lg btn-primary-second" type="submit">Submit</button>
+    <button class="w-100 btn btn-lg btn-primary-second" type="submit">Log In</button>
 
   </form>
 
@@ -33,13 +33,13 @@
       <div>
         <nav class="nav nav-masthead justify-content-center float-md-end">
           <a class="nav-link" aria-current="page" href="/">Home</a>
-          <a class="nav-link active" aria-current="page" href="/login">Login</a>
-          <a class="nav-link" aria-current="page" href="/registration">Registrations</a>
+          <a class="nav-link active" aria-current="page" href="/login">Sign on</a>
+          <a class="nav-link" aria-current="page" href="/registration">Sign in</a>
         </nav>
       </div>
     </header>
     </div>
-  <p class="mt-5 mb-3 text-muted">&copy; 2017–2021</p>
+  <p class="mt-5 mb-3 text-muted">&copy; 2021</p>
 </main>
 
 </body>
