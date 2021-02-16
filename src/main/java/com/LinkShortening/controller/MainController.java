@@ -19,6 +19,27 @@ public class MainController {
 
   @GetMapping("/")
   public String greeting(Map<String, Object> model) {
+    Iterable<Message> messages = messageRepo.findAll();
+
+    model.put("messages", messages);
+
+    return "main";
+  }
+
+  @PostMapping("/")
+  public String addFromMain(
+      @AuthenticationPrincipal User user,
+      @RequestParam String text,
+      @RequestParam String tag,
+      Map<String, Object> model) {
+    Message message = new Message(text, tag, user);
+
+    messageRepo.save(message);
+
+    Iterable<Message> messages = messageRepo.findAll();
+
+    model.put("messages", messages);
+
     return "main";
   }
 
