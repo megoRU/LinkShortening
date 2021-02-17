@@ -1,37 +1,63 @@
-<html>
+<html lang="en" class="h-100">
 <head>
-  <title>Main page</title>
+  <meta charset="utf-8">
+  <title>Link Shortening</title>
   <link rel="icon" type="image/png" href="images/favicon.png" sizes="128x128">
   <!-- Bootstrap core CSS -->
-  <link href="/css/bootstrap.min.css" type="text/css" rel="stylesheet">
+  <link href="/css/bootstrap.min.css" rel="stylesheet">
   <!-- Custom styles for this template -->
+  <link href="/css/styles.css" rel="stylesheet">
+  <!-- Favicons -->
+  <meta name="theme-color" content="#7952b3">
+
+  <style>
+    .bd-placeholder-img {
+      font-size: 1.125rem;
+      text-anchor: middle;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      user-select: none;
+    }
+
+    @media (min-width: 768px) {
+      .bd-placeholder-img-lg {
+        font-size: 3.5rem;
+      }
+    }
+  </style>
+
+  <style></style>
 </head>
-<body>
-<div>
+<body class="d-flex h-100 text-center text-white bg-dark">
+<div class="sign-out">
   <form action="/logout" method="post">
-    <input type="hidden" name="_csrf" value="{{_csrf.token}}" />
-    <input type="submit" value="Sign Out"/>
+    <input type="hidden" name="_csrf" value="{{_csrf.token}}"/>
+    <button class="btn btn-danger" type="submit">Sign Out</button>
   </form>
 </div>
-<div>
-  <form method="post">
-    <input type="text" name="text" placeholder="Введите сообщение" />
-    <input type="text" name="tag" placeholder="Тэг">
-    <input type="hidden" name="_csrf" value="{{_csrf.token}}" />
-    <button type="submit">Добавить</button>
-  </form>
+<div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
+
+  <main class="px-3">
+    <form method="post">
+      <div class="input-group mb-3">
+        <input type="text" name="text" class="form-control" placeholder="Enter the link" aria-describedby="basic-addon2">
+        <div class="input-group-append">
+          <input type="hidden" name="_csrf" value="{{_csrf.token}}"/>
+          <button class="btn btn-outline-primary" type="submit">Send</button>
+        </div>
+      </div>
+    </form>
+  </main>
+  <br>
+  {{#messages}}
+    <div>
+      <b>Text:</b> {{text}}
+      <b>Author:</b> {{authorName}}
+    </div>
+  {{/messages}}
+  <footer class="mt-auto text-white-50">
+    <p>2021, by <a href="https://megoru.ru" target="_blank" class="text-white">mego</a></p>
+  </footer>
 </div>
-<div>Список сообщений</div>
-<form method="post" action="filter">
-  <input type="text" name="filter">
-  <input type="hidden" name="_csrf" value="{{_csrf.token}}" />
-  <button type="submit">Найти</button>
-</form>
-{{#messages}}
-  <div>
-    <b>Text:</b> {{text}}
-    <b>Author:</b> {{authorName}}
-  </div>
-{{/messages}}
 </body>
 </html>
