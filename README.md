@@ -1,6 +1,6 @@
 # LinkShortening
 
-Preview: http://45.138.72.66:8080/
+Preview: https://javamegotest.tk/
 
 Сокращает URL ссылки.
 
