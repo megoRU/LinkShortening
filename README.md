@@ -1,6 +1,6 @@
 # LinkShortening
 
-Preview: https://javamegotest.tk/
+Preview: https://link.megoru.ru/
 
 Сокращает URL ссылки.
 
