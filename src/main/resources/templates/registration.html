@@ -1,52 +1,47 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="RU">
 <head>
-  <title>Registrations page</title>
-  <link rel="icon" type="image/png" href="images/favicon.png" sizes="128x128">
-  <!-- Bootstrap core CSS -->
-  <link href="/css/bootstrap.min.css" rel="stylesheet">
+    <title>Registrations page</title>
+    <link rel="icon" type="image/png" href="images/favicon.png" sizes="128x128">
+    <!-- Bootstrap core CSS -->
+    <link href="/css/bootstrap.min.css" rel="stylesheet">
 
-  <!-- Custom styles for this template -->
-  <link href="/css/signin.css" rel="stylesheet">
-  <link href="/css/styles.css" rel="stylesheet">
+    <!-- Custom styles for this template -->
+    <link href="/css/signin.css" rel="stylesheet">
+    <link href="/css/styles.css" rel="stylesheet">
 
 <body class="text-center">
 
 <main class="form-signin">
-  <form action="/registration" method="post">
-    <img class="mb-4" draggable="false" src="/images/favicon.png" alt="" width="150" height="150">
-    <h1 class="h3 mb-3 fw-normal">Sign in</h1>
 
-<!--    {{#message}}-->
-<!--      <b> ⚠ {{message}}</b>-->
-<!--      <br><br>-->
-<!--    {{/message}}-->
+        <form>
+            <img class="mb-4" draggable="false" src="/images/favicon.png" alt="" width="150" height="150">
+            <h1 class="h3 mb-3 fw-normal">Sign in</h1>
+            <input type="email" class="form-control" placeholder="Email" name="email" required>
+            <input type="username" class="form-control" placeholder="User name" name="username" required>
+            <input type="password" id="inputPassword" class="form-control" placeholder="Password" name="password"
+                   required>
+            <div class="checkbox mb-3">
+            </div>
+            <button id="submit" class="w-100 btn btn-lg btn-primary-second" type="submit">Submit</button>
+        </form>
 
-    <label for="inputEmail" class="visually-hidden">Email</label>
-    <input type="text" class="form-control" placeholder="Email" name="email" required>
-    <label for="inputUser" class="visually-hidden">User name</label>
-    <input type="text" class="form-control" placeholder="User name" name="username" required>
-    <label for="inputPassword" class="visually-hidden">Password</label>
-    <input type="password" id="inputPassword" class="form-control" placeholder="Password" name="password" required>
-    <div class="checkbox mb-3">
+    <div class="cover-container d-flex w-100 h-100 p-32 mx-auto flex-column">
+        <header class="mb-auto2">
+            <div>
+                <nav class="nav nav-masthead justify-content-center float-md-end">
+                    <a class="nav-link" aria-current="page" href="/">Home</a>
+                    <a class="nav-link" aria-current="page" href="/login">Log in</a>
+                    <a class="nav-link active" aria-current="page" href="/registration">Sign Up</a>
+                </nav>
+            </div>
+        </header>
     </div>
-    <input type="hidden" name="_csrf" value="{{_csrf.token}}"/>
-    <button class="w-100 btn btn-lg btn-primary-second" type="submit">Submit</button>
-  </form>
-  <div class="cover-container d-flex w-100 h-100 p-32 mx-auto flex-column">
-    <header class="mb-auto2">
-      <div>
-        <nav class="nav nav-masthead justify-content-center float-md-end">
-          <a class="nav-link" aria-current="page" href="/">Home</a>
-          <a class="nav-link" aria-current="page" href="/login">Log in</a>
-          <a class="nav-link active" aria-current="page" href="/registration">Sign Up</a>
-        </nav>
-      </div>
-    </header>
-  </div>
-  <p class="mt-5 mb-3 text-muted">&copy; 2021</p>
+    <p class="mt-5 mb-3 text-muted">&copy; 2021</p>
 </main>
 
+<script type="text/javascript" src="/js/ajax.js"></script>
+<script type="text/javascript" src="/js/registration.js"></script>
 </body>
 </html>
 

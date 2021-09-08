@@ -13,11 +13,12 @@ import org.springframework.security.config.annotation.web.configuration.WebSecur
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
+import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
 @Configuration
 @EnableWebSecurity
 @EnableGlobalMethodSecurity(prePostEnabled = true)
-public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
+public class WebSecurityConfig extends WebSecurityConfigurerAdapter implements WebMvcConfigurer {
 
     private final UserDetailsService userDetailsService;
 
@@ -28,9 +29,10 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 
     @Override
     protected void configure(HttpSecurity http) throws Exception {
-        http
+        http.csrf()
+                .disable()
                 .authorizeRequests()
-                .antMatchers("/", "/registration", "/css/**", "/images/**", "/activate/*").permitAll()
+                .antMatchers("/", "/login", "/registration", "/css/**", "/js/**", "/images/**", "/activate/*").permitAll()
                 .anyRequest().authenticated()
                 .and()
                 .formLogin()

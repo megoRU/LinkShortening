@@ -1,29 +1,28 @@
 package main.controller;
 
+import lombok.AllArgsConstructor;
 import main.domain.Message;
 import main.domain.User;
 import main.repos.MessageRepo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.annotation.AuthenticationPrincipal;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.Map;
 
 @Controller
+@AllArgsConstructor
 public class MainController {
 
-    @Autowired
-    private MessageRepo messageRepo;
+    private final MessageRepo messageRepo;
 
-    @GetMapping("/")
-    public String site(Map<String, Object> model) {
-        return "site.html";
+    @RequestMapping("/")
+    public String site() {
+        return "site";
     }
 
-    @GetMapping("/main")
+    @RequestMapping("/main")
     public String main(
             @AuthenticationPrincipal User user,
             Map<String, Object> model) {
