@@ -1,0 +1,15 @@
+spring:
+  datasource:
+    driverClassName: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://45.138.72.66:3306/LinkShortening?useSSL=false&serverTimezone=UTC&characterEncoding=utf8
+    username: LinkShortening
+    password: fqht32mEX*nsLgm1
+
+  jpa:
+    database-platform: org.hibernate.dialect.MySQL8Dialect
+    hibernate:
+      ddl-auto: create
+    show-sql: false
+
+server:
+  port: ${PORT:8080}

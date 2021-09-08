@@ -1,7 +1,7 @@
-package com.LinkShortening.repos;
+package main.repos;
 
-import com.LinkShortening.domain.Message;
-import com.LinkShortening.domain.User;
+import main.domain.Message;
+import main.domain.User;
 import java.util.List;
 import org.springframework.data.repository.CrudRepository;
 

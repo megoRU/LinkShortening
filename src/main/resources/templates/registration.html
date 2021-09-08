@@ -17,12 +17,14 @@
     <img class="mb-4" draggable="false" src="/images/favicon.png" alt="" width="150" height="150">
     <h1 class="h3 mb-3 fw-normal">Sign in</h1>
 
-    {{#message}}
-      <b> ⚠ {{message}}</b>
-      <br><br>
-    {{/message}}
+<!--    {{#message}}-->
+<!--      <b> ⚠ {{message}}</b>-->
+<!--      <br><br>-->
+<!--    {{/message}}-->
 
-    <label for="inputEmail" class="visually-hidden">User name</label>
+    <label for="inputEmail" class="visually-hidden">Email</label>
+    <input type="text" class="form-control" placeholder="Email" name="email" required>
+    <label for="inputUser" class="visually-hidden">User name</label>
     <input type="text" class="form-control" placeholder="User name" name="username" required>
     <label for="inputPassword" class="visually-hidden">Password</label>
     <input type="password" id="inputPassword" class="form-control" placeholder="Password" name="password" required>
@@ -36,8 +38,8 @@
       <div>
         <nav class="nav nav-masthead justify-content-center float-md-end">
           <a class="nav-link" aria-current="page" href="/">Home</a>
-          <a class="nav-link" aria-current="page" href="/login">Sign on</a>
-          <a class="nav-link active" aria-current="page" href="/registration">Sign in</a>
+          <a class="nav-link" aria-current="page" href="/login">Log in</a>
+          <a class="nav-link active" aria-current="page" href="/registration">Sign Up</a>
         </nav>
       </div>
     </header>
