@@ -10,6 +10,9 @@ $(function () {
 
                 window.location = "/login";
 
+            },
+            error: function () {
+                alert('Пользователь уже существует');
             }
         });
         return false;

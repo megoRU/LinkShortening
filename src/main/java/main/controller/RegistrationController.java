@@ -2,6 +2,7 @@ package main.controller;
 
 import lombok.AllArgsConstructor;
 import main.api.request.DTOErrorDescription;
+import main.api.request.LoginRequest;
 import main.api.request.RegistrationRequest;
 import main.domain.User;
 import main.domain.enums.Role;
@@ -31,14 +32,14 @@ public class RegistrationController {
         return "login";
     }
 
-//    @PostMapping("/login")
-//    public ResponseEntity<?> login(LoginRequest loginRequest) {
-//
-//        System.out.println(loginRequest.toString());
-//
-//
-//        return new ResponseEntity<>(loginRequest, HttpStatus.OK);
-//    }
+    @PostMapping("/login")
+    public ResponseEntity<?> login(LoginRequest loginRequest) {
+
+        System.out.println(loginRequest.toString());
+
+
+        return new ResponseEntity<>(loginRequest, HttpStatus.OK);
+    }
 
 
     @PostMapping("/registration")

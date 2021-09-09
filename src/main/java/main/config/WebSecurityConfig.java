@@ -27,23 +27,23 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter implements W
         this.userDetailsService = userDetailsService;
     }
 
-    @Override
+
     protected void configure(HttpSecurity http) throws Exception {
+//                .antMatchers("/", "/login", "/registration", "/css/**", "/js/**", "/images/**", "/activate/*").permitAll()
         http.csrf()
                 .disable()
                 .authorizeRequests()
-                .antMatchers("/", "/login", "/registration", "/css/**", "/js/**", "/images/**", "/activate/*").permitAll()
-                .anyRequest().authenticated()
+                .antMatchers("/**").permitAll()
+                .anyRequest()
+                .authenticated()
                 .and()
                 .formLogin()
                 .loginPage("/login")
-                .defaultSuccessUrl("/main", true)
-                .permitAll()
-                .and()
-                .rememberMe()
                 .and()
                 .logout()
-                .permitAll();
+                .invalidateHttpSession(true)
+                .deleteCookies("JSESSIONID")
+                .and().httpBasic();
     }
 
     @Bean
