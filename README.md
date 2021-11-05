@@ -2,7 +2,7 @@
 
 Сокращает URL ссылки.
 
-https://app-megoru.herokuapp.com/ <br>
+https://app-link-shortening.herokuapp.com <br>
 
 ## Запуск
 Для запуска можно использовать сервис heroku.com. Для этого нужно создать аккаунт там.
