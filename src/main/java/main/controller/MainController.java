@@ -4,11 +4,12 @@ import lombok.AllArgsConstructor;
 import main.domain.Message;
 import main.domain.User;
 import main.repos.MessageRepo;
-import org.springframework.beans.factory.annotation.Autowired;
+import main.security.UserService;
 import org.springframework.security.core.annotation.AuthenticationPrincipal;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
+import java.security.Principal;
 import java.util.Map;
 
 @Controller
@@ -16,18 +17,19 @@ import java.util.Map;
 public class MainController {
 
     private final MessageRepo messageRepo;
+    private final UserService userService;
 
-    @RequestMapping("/")
-    public String site() {
-        return "site";
-    }
-
-    @RequestMapping("/main")
+    @GetMapping("/main")
     public String main(
-            @AuthenticationPrincipal User user,
+            Principal principal,
             Map<String, Object> model) {
 
-        Iterable<Message> messages = messageRepo.findByAuthor(user);
+        if (principal == null) {
+            System.out.println("redirect:/login");
+            return "redirect:/login";
+        }
+
+        Iterable<Message> messages = messageRepo.findByAuthor(userService.getCurrentUser());
 
         model.put("messages", messages);
 

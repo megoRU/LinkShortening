@@ -18,33 +18,30 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 @Configuration
 @EnableWebSecurity
 @EnableGlobalMethodSecurity(prePostEnabled = true)
-public class WebSecurityConfig extends WebSecurityConfigurerAdapter implements WebMvcConfigurer {
+public class SecurityConfig extends WebSecurityConfigurerAdapter {
+// implements WebMvcConfigurer
 
     private final UserDetailsService userDetailsService;
 
     @Autowired
-    public WebSecurityConfig(@Qualifier("userDetailServiceImpl") UserDetailsService userDetailsService) {
+    public SecurityConfig(@Qualifier("userDetailServiceImpl") UserDetailsService userDetailsService) {
         this.userDetailsService = userDetailsService;
     }
 
-
     protected void configure(HttpSecurity http) throws Exception {
-//                .antMatchers("/", "/login", "/registration", "/css/**", "/js/**", "/images/**", "/activate/*").permitAll()
-        http.csrf()
-                .disable()
-                .authorizeRequests()
+        http.csrf().disable().
+                authorizeRequests()
                 .antMatchers("/**").permitAll()
                 .anyRequest()
                 .authenticated()
                 .and()
-                .formLogin()
-                .loginPage("/login")
-                .and()
-                .logout()
-                .invalidateHttpSession(true)
-                .deleteCookies("JSESSIONID")
-                .and().httpBasic();
+                .formLogin(form -> form
+                        .defaultSuccessUrl("/main")
+                        .loginPage("/login")
+                        .failureUrl("/login?error=true")
+                );
     }
+
 
     @Bean
     protected DaoAuthenticationProvider daoAuthenticationProvider() {
@@ -64,5 +61,6 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter implements W
     public AuthenticationManager authenticationManagerBean() throws Exception {
         return super.authenticationManagerBean();
     }
+
 
 }

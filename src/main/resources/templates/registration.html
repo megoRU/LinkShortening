@@ -14,8 +14,9 @@
 
 <main class="form-signin">
 
-        <form>
-            <img class="mb-4" draggable="false" src="/images/favicon.png" alt="" width="150" height="150">
+    <form role="form" th:action="@{/registration}" th:method="post">
+
+    <img class="mb-4" draggable="false" src="/images/favicon.png" alt="" width="150" height="150">
             <h1 class="h3 mb-3 fw-normal">Sign in</h1>
             <input type="email" class="form-control" placeholder="Email" name="email" required>
             <input type="username" class="form-control" placeholder="User name" name="username" required>
@@ -39,11 +40,5 @@
     </div>
     <p class="mt-5 mb-3 text-muted">&copy; 2021</p>
 </main>
-
-<script type="text/javascript" src="/js/ajax.js"></script>
-<script type="text/javascript" src="/js/registration.js"></script>
 </body>
 </html>
-
-
-

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="RU">
+
 <head>
     <title>Login page</title>
     <link rel="icon" type="image/png" href="images/favicon.png" sizes="128x128">
@@ -15,18 +16,21 @@
 
 <main class="form-signin">
 
-    <form>
+    <form name="form" th:action="@{/api/login}" method="post">
+
+        <div th:if="${param.error}" class="alert alert-error">
+            Неправильные имя и пароль.
+        </div>
         <img class="mb-4" draggable="false" src="/images/favicon.png" alt="" width="150" height="150">
         <h1 class="h3 mb-3 fw-normal">Sign on</h1>
-        <label for="inputEmail" class="visually-hidden">User name</label>
-        <input type="text" class="form-control" placeholder="User name" name="username" required>
-        <label for="inputPassword" class="visually-hidden">Password</label>
-        <input type="password" id="inputPassword" class="form-control" placeholder="Password"
-               name="password" required>
-        <div class="checkbox mb-3">
-        </div>
-        <button id="login" class="w-100 btn btn-lg btn-primary-second" type="login">Log In</button>
 
+        <input type="email" class="form-control" placeholder="Email" name="email" required>
+        <input type="password" id="inputPassword" class="form-control" placeholder="Password" name="password" required>
+
+        <div class="checkbox mb-3">
+
+        <button id="login" class="w-100 btn btn-lg btn-primary-second" type="login">Log In</button>
+         </div>
     </form>
 
     <div class="cover-container d-flex w-100 h-100 p-32 mx-auto flex-column">
@@ -42,8 +46,35 @@
     </div>
     <p class="mt-5 mb-3 text-muted">&copy; 2021</p>
 </main>
-
-<script type="text/javascript" src="/js/ajax.js"></script>
-<script type="text/javascript" src="/js/login.js"></script>
 </body>
 </html>
+
+
+<!--<html xmlns="http://www.w3.org/1999/xhtml"-->
+<!--      xmlns:th="http://www.thymeleaf.org">-->
+<!--<head>-->
+<!--    <title th:text="${title}"></title>-->
+<!--</head>-->
+<!--<body>-->
+<!--<div>-->
+<!--    <form name="form" th:action="@{/login}" method="post">-->
+<!--        <fieldset>-->
+<!--            <legend>Войдите</legend>-->
+<!--            <div th:if="${param.error}" class="alert alert-error">-->
+<!--                Неправильные имя и пароль.-->
+<!--            </div>-->
+<!--            <div th:if="${param.logout}" class="alert alert-success">-->
+<!--                You have been logged out.-->
+<!--            </div>-->
+<!--            <label for="email">Имя</label>-->
+<!--            <input type="text" id="email" name="email"/>-->
+<!--            <label for="password">Пароль</label>-->
+<!--            <input type="password" id="password" name="password"/>-->
+<!--            <div class="form-actions">-->
+<!--                <button type="submit" class="btn">Войти</button>-->
+<!--            </div>-->
+<!--        </fieldset>-->
+<!--    </form>-->
+<!--</div>-->
+<!--</body>-->
+<!--</html>-->

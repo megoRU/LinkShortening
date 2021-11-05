@@ -8,7 +8,7 @@ $(function () {
             data: data,
             success: function (response) {
 
-                window.location = "/login";
+                // window.location = "/login";
 
             },
             error: function () {

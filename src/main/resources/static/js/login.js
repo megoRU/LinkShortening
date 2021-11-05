@@ -7,8 +7,8 @@ $(function () {
             url: '/login',
             data: data,
             success: function (response) {
-
-                window.location = "/main";
+                console.log(data)
+                 // window.location = "/main";
 
             }
         });
