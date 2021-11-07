@@ -15,7 +15,6 @@ public class LoginController {
 
     @GetMapping("/login")
     public String login() {
-        System.out.println("@GetMapping(\"/login\")");
         return "login";
     }
 
