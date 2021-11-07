@@ -30,3 +30,12 @@ https://app-link-shortening.herokuapp.com <br>
 - Maven
 
 ## Изображения
+
+#### Главная страница
+[<img src="https://raw.githubusercontent.com/megoRU/LinkShortening/main/img/main.png?raw=true">]()
+
+#### Регистрация
+[<img src="https://raw.githubusercontent.com/megoRU/LinkShortening/main/img/registration%20page.png?raw=true">]()
+
+#### Панель управления
+[<img src="https://raw.githubusercontent.com/megoRU/LinkShortening/main/img/webpanel.png?raw=true">]()
