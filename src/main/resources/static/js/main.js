@@ -48,7 +48,6 @@ Vue.component('message-form', {
 
 Vue.component('message-row', {
     props: ['message', 'editMethod', 'messages'],
-    text: 'http://localhost:8080/r/{{ message.destinationUrl }}',
     template:
         '<div class="a" style="">' +
         '<a :href="\'http://localhost:8080/r/\' + message.destinationUrl ">  http://localhost:8080/r/{{ message.destinationUrl }}</a> -> {{ message.sourceUrl }}' +
