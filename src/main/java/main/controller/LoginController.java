@@ -21,10 +21,6 @@ public class LoginController {
 
     @PostMapping("/api/login")
     public String login(LoginRequest loginRequest) throws Exception {
-        System.out.println("@PostMapping(\"/login\")");
-
-        System.out.println(loginRequest.toString());
-
         boolean login = loginService.login(loginRequest);
 
         if (!(login)) {

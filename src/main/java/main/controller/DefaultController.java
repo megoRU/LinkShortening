@@ -10,4 +10,10 @@ public class DefaultController {
     public String site() {
         return "site";
     }
+
+    @GetMapping("/404")
+    public String errorPage() {
+        return "404";
+    }
+
 }

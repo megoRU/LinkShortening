@@ -13,9 +13,8 @@ https://app-link-shortening.herokuapp.com <br>
 1. Регистрация
 2. Логин
 3. Панель управления (Только верстка)
-
-## Что НЕ реализовано
-1. Логика
+4. При сохранении URL создает уникальный "hash"
+5. Можно удалять свои ссылки
 
 ## P. S.
 В репозитории хранится в общем доступе: ip, login, password для доступа к нужной БД.
@@ -26,6 +25,6 @@ https://app-link-shortening.herokuapp.com <br>
 - Java 8
 - Spring boot: Web, Security
 - Hibernate
-- PostgresSQL / MySQL
-- Mustache, HTML, CSS
+- MySQL
+- Mustache, HTML, CSS, Vue.js, JS
 - Maven

@@ -12,21 +12,25 @@ import javax.persistence.*;
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
-public class Message {
+public class UserUrls {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
-    private String text;
+    @Column(name = "source_url", nullable = false, columnDefinition = "TEXT")
+    private String sourceUrl;
+
+    @Column(name = "destination_url", nullable = false, columnDefinition = "TEXT")
+    private String destinationUrl;
 
     @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "user_id")
     private User author;
 
-    public Message(String text, User user) {
+    public UserUrls(String sourceUrl, User user) {
         this.author = user;
-        this.text = text;
+        this.sourceUrl = sourceUrl;
     }
 
     public String getAuthorName() {

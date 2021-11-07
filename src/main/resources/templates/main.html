@@ -5,56 +5,32 @@
     <link rel="icon" type="image/png" href="images/favicon.png" sizes="128x128">
     <!-- Bootstrap core CSS -->
     <link href="/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Custom styles for this template -->
+
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue-resource@1.5.3"></script>
+
     <link href="/css/styles.css" rel="stylesheet">
+
     <!-- Favicons -->
     <meta name="theme-color" content="#7952b3">
 
-    <style>
-        .bd-placeholder-img {
-            font-size: 1.125rem;
-            text-anchor: middle;
-            -webkit-user-select: none;
-            -moz-user-select: none;
-            user-select: none;
-        }
-
-        @media (min-width: 768px) {
-            .bd-placeholder-img-lg {
-                font-size: 3.5rem;
-            }
-        }
-    </style>
-
-    <style></style>
 </head>
-<body class="d-flex h-100 text-center text-white bg-dark">
-<div class="sign-out">
-    <form action="/logout" method="post">
-        <button class="btn btn-danger" type="submit">Sign Out</button>
-    </form>
-</div>
+<body >
+
 <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
-
-    <main class="px-3">
-        <form>
-            <div class="input-group mb-3">
-                <input type="text" name="text" class="form-control" placeholder="Enter the link"
-                       aria-describedby="basic-addon2">
-                <div class="input-group-append">
-                    <button id="submit" class="btn btn-outline-primary" type="submit">Send</button>
-                </div>
-            </div>
+    <div class="sign-out">
+        <form action="/logout" method="post">
+            <button class="btn btn-danger" type="submit">Sign Out</button>
         </form>
+    </div>
+    <main class="px-3">
+        <div id="app"></div>
     </main>
-
-
     <footer class="mt-auto text-white-50">
         <p>2021, by <a href="https://megoru.ru" target="_blank" class="text-white">mego</a></p>
     </footer>
 </div>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script>
 <script type="text/javascript" src="/js/main.js"></script>
 </body>
 </html>

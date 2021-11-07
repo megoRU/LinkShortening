@@ -26,8 +26,6 @@ public class RegistrationController {
     @PostMapping("/registration")
     public String regUser(RegistrationRequest registrationRequest) {
 
-        System.out.println(registrationRequest.toString());
-
         if (registrationRequest.getUsername().equals("")
                 || registrationRequest.getEmail().equals("")
                 || registrationRequest.getPassword().equals("")) {

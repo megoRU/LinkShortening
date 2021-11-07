@@ -7,111 +7,156 @@
 .btn-secondary,
 .btn-secondary:hover,
 .btn-secondary:focus {
-  color: #333;
-  text-shadow: none; /* Prevent inheritance from `body` */
+    color: #333;
+    text-shadow: none; /* Prevent inheritance from `body` */
 }
 
+
+.btn {
+    margin-left: 4px;
+}
 
 /*
  * Base structure
  */
 
 body {
-  text-shadow: 0 .05rem .1rem rgba(0, 0, 0, 0.5);
-  box-shadow: inset 0 0 5rem rgba(0, 0, 0, .5);
+    background-color: #212529;
+    color: #f5f3f3;
+    /*text-shadow: 0 .05rem .1rem rgba(0, 0, 0, 0.5);*/
+    /*box-shadow: inset 0 0 5rem rgba(0, 0, 0, .5);*/
 }
 
 .cover-container {
-  max-width: 42em;
+    max-width: 58em;
 }
 
 /*
  * Header
  */
 
+.btn-danger {
+    padding-top: 0;
+    padding-bottom: 2px;
+}
+
+.a {
+    display: block;
+    padding-top: 10px;
+    text-align: left;
+}
+
+
 .nav-masthead .nav-link {
-  padding: .25rem 0;
-  font-weight: 700;
-  color: rgba(255, 255, 255, .5);
-  background-color: transparent;
-  border-bottom: .25rem solid transparent;
+    padding: .25rem 0;
+    font-weight: 700;
+    color: rgba(255, 255, 255, .5);
+    background-color: transparent;
+    border-bottom: .25rem solid transparent;
 }
 
 .nav-masthead .nav-link:hover,
 .nav-masthead .nav-link:focus {
-  border-bottom-color: rgba(255, 255, 255, .25);
+    border-bottom-color: rgba(255, 255, 255, .25);
 }
 
 .nav-masthead .nav-link + .nav-link {
-  margin-left: 1rem;
+    margin-left: 1rem;
 }
 
 .nav-masthead .active {
-  color: #fff;
-  border-bottom-color: #fff;
+    color: #fff;
+    border-bottom-color: #fff;
 }
 
+
+.my-btn {
+    display: inline-block;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #212529;
+    text-align: center;
+    text-decoration: none;
+    vertical-align: middle;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+    background-color: transparent;
+    border: 1px
+    solid transparent;
+    padding: 0.375rem
+    0.75rem;
+    font-size: 1rem;
+    border-radius: 0.25rem;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
+
 .form-control {
-  display: block;
-  width: 100%;
-  padding: .375rem .75rem;
-  font-size: 1rem;
-  font-weight: 400;
-  line-height: 1.5;
-  color: #212529;
-  background-color: #fff;
-  background-clip: padding-box;
-  border: 1px solid #ced4da;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  border-radius: 9px!important;
-  transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+    display: block;
+    width: 100%;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #212529;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    /*border-radius: 9px!important;*/
+    transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
 }
 
 .btn-primary {
-  color: #fff;
-  background-color: #0d6efd;
-  border-color: #0d6efd;
-  position: relative;
-  left: 19px;
-  font-weight: 500;
-  font-size: 15px;
+    color: #fff;
+    background-color: #0d6efd;
+    border-color: #0d6efd;
+    position: relative;
+    left: 19px;
+    font-weight: 500;
+    font-size: 15px;
 }
 
 .btn-primary-second {
-  color: #fff!important;
-  background-color: #0d6efd!important;
-  border-color: #0d6efd!important;
+    color: #fff !important;
+    background-color: #0d6efd !important;
+    border-color: #0d6efd !important;
 }
 
 .btn-outline-primary {
-  color: #fff;
-  border-color: #0d6efd;
-  background-color: #0d6efd;
-  margin-left: 8px;
+    color: #fff;
+    border-color: #0d6efd;
+    background-color: #0d6efd;
+    margin-left: 8px;
 }
 
 .mb-auto2 {
-  margin: auto!important;
+    margin: auto !important;
 }
 
 .p-32 {
-  margin-top: 35px;
+    margin-top: 35px;
 }
 
 .sign-out {
-  position: relative;
-  margin-top: 15px;
-  left: 1396px;
+    position: relative;
+    margin-top: -43px;
+    left: -90px;
+    top: 48px;
+    padding: 0;
 }
 
 footer p {
-  font-weight: 500;
-  font-size: 15px;
+    font-weight: 500;
+    font-size: 15px;
+    text-align: center;
 }
 
 footer a {
-  text-decoration: none;
+    text-decoration: none;
 }
 
