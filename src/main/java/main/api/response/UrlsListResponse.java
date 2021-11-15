@@ -4,8 +4,6 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-import java.net.InetAddress;
-
 @Getter
 @Setter
 @NoArgsConstructor
@@ -20,6 +18,6 @@ public class UrlsListResponse {
         this.id = id;
         this.sourceUrl = sourceUrl;
         this.destinationUrl = destinationUrl;
-        this.fullStringForFront = InetAddress.getLoopbackAddress().getHostName() + "/r/" + destinationUrl;
+        this.fullStringForFront = "app-link-shortening.herokuapp.com" + "/r/" + destinationUrl;
     }
 }
