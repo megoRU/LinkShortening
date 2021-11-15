@@ -50,7 +50,7 @@ Vue.component('message-row', {
     props: ['message', 'editMethod', 'messages'],
     template:
         '<div class="a" style="">' +
-        '<a :href="\'http://localhost:8080/r/\' + message.destinationUrl ">  http://localhost:8080/r/{{ message.destinationUrl }}</a> -> {{ message.sourceUrl }}' +
+        '<a :href="\'https://' + '\' + message.fullStringForFront"> https://{{ message.fullStringForFront }}</a> -> {{ message.sourceUrl }}' +
         '   <button type="button" class="btn btn-danger" @click="del">Удалить</button>' +
         '</div>',
     methods: {
