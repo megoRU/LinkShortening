@@ -12,7 +12,7 @@ https://app-link-shortening.herokuapp.com <br>
 ## Что реализовано
 1. Регистрация
 2. Логин
-3. Панель управления (Только верстка)
+3. Панель управления
 4. При сохранении URL создает уникальный "hash"
 5. Можно удалять свои ссылки
 
@@ -30,3 +30,12 @@ https://app-link-shortening.herokuapp.com <br>
 - Maven
 
 ## Изображения
+
+#### Главная страница
+[<img src="https://raw.githubusercontent.com/megoRU/LinkShortening/main/img/main.png?raw=true">]()
+
+#### Регистрация
+[<img src="https://raw.githubusercontent.com/megoRU/LinkShortening/main/img/registration%20page.png?raw=true">]()
+
+#### Панель управления
+[<img src="https://raw.githubusercontent.com/megoRU/LinkShortening/main/img/webpanel.png?raw=true">]()
