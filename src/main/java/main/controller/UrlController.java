@@ -66,6 +66,7 @@ public class UrlController {
             urlRequest.setId(userUrls.getId());
             urlRequest.setDestinationUrl(uuid);
             urlRequest.setSourceUrl(urlRequest.getText());
+            urlRequest.setFullStringForFront("app-link-shortening.herokuapp.com" + "/r/" + uuid);
 
             return new ResponseEntity<>(urlRequest, HttpStatus.OK);
         }

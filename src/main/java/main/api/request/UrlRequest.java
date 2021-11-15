@@ -13,4 +13,5 @@ public class UrlRequest {
     private String text;
     private String destinationUrl;
     private String sourceUrl;
+    private String fullStringForFront;
 }
